@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/tencentyun/scf-go-lib/cloudevents/scf"
+	"github.com/corlydream/scf-go-lib/cloudevents/scf"
 )
 
 func TestCMQ(t *testing.T) {

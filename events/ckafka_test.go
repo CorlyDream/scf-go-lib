@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/tencentyun/scf-go-lib/events"
+	"github.com/corlydream/scf-go-lib/events"
 )
 
 func TestCKafka(t *testing.T) {

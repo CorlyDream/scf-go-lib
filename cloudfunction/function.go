@@ -7,8 +7,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/tencentyun/scf-go-lib/cloudfunction/messages"
-	"github.com/tencentyun/scf-go-lib/functioncontext"
+	"github.com/corlydream/scf-go-lib/cloudfunction/messages"
+	"github.com/corlydream/scf-go-lib/functioncontext"
 )
 
 type Function struct {

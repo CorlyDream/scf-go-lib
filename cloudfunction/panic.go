@@ -5,7 +5,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/tencentyun/scf-go-lib/cloudfunction/messages"
+	"github.com/corlydream/scf-go-lib/cloudfunction/messages"
 )
 
 type panicInfo struct {
