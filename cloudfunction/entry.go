@@ -36,7 +36,7 @@ import (
 // See https://golang.org/pkg/encoding/json/#Unmarshal for how deserialization behaves
 
 func Start(handler interface{}) {
-	wrappedHandler := newHandler(handler)
+	wrappedHandler := NewHandler(handler)
 	StartHandler(wrappedHandler)
 }
 

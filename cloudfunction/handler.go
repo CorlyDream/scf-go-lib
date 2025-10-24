@@ -68,9 +68,9 @@ func validateReturns(handler reflect.Type) error {
 	return nil
 }
 
-// newHandler Creates the base function handler, which will do basic payload unmarshaling before defering to handlerSymbol.
+// NewHandler Creates the base function handler, which will do basic payload unmarshaling before defering to handlerSymbol.
 // If handlerSymbol is not a valid handler, the returned function will be a handler that just reports the validation error.
-func newHandler(handlerSymbol interface{}) functionHandler {
+func NewHandler(handlerSymbol interface{}) functionHandler {
 	if handlerSymbol == nil {
 		return errorHandler(fmt.Errorf("handler is nil"))
 	}
