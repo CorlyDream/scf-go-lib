@@ -62,3 +62,21 @@ func StartHandler(handler Handler) {
 	rpc.Accept(lis)
 	log.Fatal("accept should not have returned")
 }
+
+func StartHandlerReturn(handler Handler) *net.Listener {
+	//todo: add env key to compatible with lambda
+	port := os.Getenv("_LAMBDA_SERVER_PORT")
+	lis, err := net.Listen("tcp", "0.0.0.0:"+port)
+	if err != nil {
+		log.Fatal(err)
+	}
+	function := new(Function)
+	function.handler = handler
+	err = rpc.Register(function)
+	if err != nil {
+		log.Fatal("failed to register handler function")
+	}
+	go rpc.Accept(lis)
+	return &lis
+}
+
